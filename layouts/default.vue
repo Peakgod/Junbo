@@ -10,9 +10,11 @@
         <no-ssr>
           <div
             v-for="(item, i) in routeTopConfig"
+            :key=i
           >
             <MenuItem
               :name="item.to"
+              :to="item.to"
             >
               {{item.title}}
             </MenuItem>
@@ -21,22 +23,20 @@
       </div>
     </Menu>
 
-    <!-- <Footer>
-      <Row type="flex" justify="center">
-        <Col>2011-2018 © 西宁君博科技有限公司 版权所有</Col>
-      </Row>
-    </Footer> -->
+    <Footer />
   </Layout>
 </template>
 
 <script>
 
 import routeTopConfig from '@/assets/config/router.top.config'
+import Footer from '@/components/Footer'
 
 export default {
   data () {
     return {
       routeTopConfig,
+      Footer
     }
   },
   methods: {
@@ -67,6 +67,7 @@ export default {
 }
 
 .menu-top {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
