@@ -1,6 +1,6 @@
 <template>
   <Layout class="layout-default">
-    <Menu class="menu-top" mode="horizontal" theme="primary">
+    <Menu class="menu-top" mode="horizontal">
       <div class="logo-container">
         <!-- <img src="@/assets/images/logo.png" alt=""> -->
         <span>智能外呼中台系统</span>
@@ -39,6 +39,8 @@ export default {
       routeTopConfig,
     }
   },
+  methods: {
+  },
   mounted () {
   }
 }
@@ -51,11 +53,6 @@ export default {
 
 .layout-default {
   // min-height: 100vh;
-}
-
-.ivu-layout-sider {
-  height: calc(100vh - 60px);
-  overflow: scroll;
 }
 
 .main-content {
@@ -73,6 +70,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 82px;
+  background: #00C0E4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
 }
 
 .logo-container {
@@ -93,6 +97,5 @@ export default {
 .nav-container {
   flex-grow: 1;
 }
-
 
 </style>
