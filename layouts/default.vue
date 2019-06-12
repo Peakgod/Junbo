@@ -1,25 +1,14 @@
 <template>
-  <Layout class="layout-default">
-    <Menu class="menu-top" mode="horizontal">
-      <div class="logo-container">
-        <!-- <img src="@/assets/images/logo.png" alt=""> -->
-        <span>智能外呼中台系统</span>
-      </div>
+  <Layout>
+    <Content>
+      <Nav/>
+    </Content>
 
-      <div class="nav-container">
-        <no-ssr>
-          <div
-            v-for="(item, i) in routeTopConfig"
-          >
-            <MenuItem
-              :name="item.to"
-            >
-              {{item.title}}
-            </MenuItem>
-          </div>
-        </no-ssr>
-      </div>
-    </Menu>
+    <Layout class="main-content">
+      <Content>
+        <nuxt />
+      </Content>
+    </Layout>
 
     <!-- <Footer>
       <Row type="flex" justify="center">
@@ -32,16 +21,22 @@
 <script>
 
 import routeTopConfig from '@/assets/config/router.top.config'
+import Nav from '~/components/Nav.vue'
 
 export default {
+  components: {
+    Nav
+  },
   data () {
     return {
       routeTopConfig,
     }
   },
   methods: {
+    
   },
   mounted () {
+    console.log(routeTopConfig);
   }
 }
 </script>

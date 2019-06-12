@@ -1,6 +1,6 @@
 export default [{
     title: '首页',
-    to: '/index'
+    to: '/'
   },
   {
     title: '网站建设',
@@ -19,7 +19,7 @@ export default [{
   },
   {
     title: '案列展示',
-    to: '/caseShows'
+    to: '/contactUs'
   },
   {
     title: '服务范围',
