@@ -3,28 +3,47 @@
     <Row>
         <Col span="4">.</Col>
         <Col span="16">
-          <Menu class="menu-top" mode="horizontal">
-            <div class="logo-container">
-              <!-- <img src="@/assets/images/logo.png" alt=""> -->
-              <span>智能外呼中台系统</span>
-            </div>
-
-            <div class="nav-container">
-              <no-ssr>
-                <div
-                  v-for="(item, i) in routeTopConfig"
-                  :key=i
-                >
-                  <MenuItem
-                    :key="item.name"
-                    :to="item.to"
-                    :name="item.to"
-                  >
-                    {{item.title}}
-                  </MenuItem>
+          <Menu class="menu-top" mode="horizontal" theme="dark">
+            <Row>
+              <Col span="7">
+                <div class="menu-logo">
+                  <img src="http://www.qhxywl.com/wp-content/themes/qhxywl/images/logo.png" alt="">
+                  <span>
+                    客户至上　用心服务
+                    <br/>
+                    资深网站建设服务商
+                  </span>
                 </div>
-              </no-ssr>
-            </div>
+              </Col>
+              <Col span="12">
+                <div class="nav-container">
+                  <no-ssr>
+                    <div
+                      v-for="(item, i) in routeTopConfig"
+                      :key=i
+                    >
+                      <MenuItem
+                        :key="item.name"
+                        :to="item.to"
+                        :name="item.to"
+                      >
+                        {{item.title}}
+                      </MenuItem>
+                    </div>
+                  </no-ssr>
+                </div>
+              </Col>
+              <Col span="3">
+                <div class="menu-logo">
+                  <!-- <img src="" alt=""> -->
+                  <span class="menu-phone">
+                    0971-8202846
+                    <br/>
+                    139 9701 2536
+                  </span>
+                </div>
+              </Col>
+            </Row>
           </Menu>
         </Col>
         <Col span="4">.</Col>
@@ -52,57 +71,51 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.error {
-  color: #ed4014;
-}
 
 .layout-default {
-  // min-height: 100vh;
   background: #00C0E4;
   width: 100%;
-}
-
-.main-content {
-  // height: calc(100vh - 60px);
-  // padding: 18px;
-  overflow: scroll;
-
-  > div {
-    padding: 18px;
-    // background-color: white;
-  }
-}
-
-.menu-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 82px;
-  background: #00C0E4;
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 99999;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  color: white;
-  font-size: 18px;
-
-  img {
-    width: 24px;
-    margin-right: 6px;
-    display: inline-block;
+  .menu-top {
+    height: 82px;
+    background: #00C0E4;
+    width: 100%;
+    .menu-logo {
+      width: 100%;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-right: 15px;
+      }
+      span {
+        color: #fff;
+        font-weight: 900;
+        line-height: 1.8;
+      }
+      .menu-phone {
+        font-size: 22px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 30px;
+      }
+    }
+    .nav-container {
+      width: 100%;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .ivu-menu-item {
+        color: #fff;
+        padding: 0 13px;
+      }
+    }
   }
-}
-
-.nav-container {
-  flex-grow: 1;
 }
 
 </style>
