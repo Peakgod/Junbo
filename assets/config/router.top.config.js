@@ -19,7 +19,7 @@ export default [{
   },
   {
     title: '案列展示',
-    to: '/contactUs'
+    to: '/caseShows'
   },
   {
     title: '服务范围',

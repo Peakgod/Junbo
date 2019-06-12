@@ -5,9 +5,7 @@
     </Content>
 
     <Layout class="main-content">
-      <Content>
-        <nuxt />
-      </Content>
+      <nuxt />
     </Layout>
 
     <Footer />
@@ -17,18 +15,17 @@
 <script>
 
 import routeTopConfig from '@/assets/config/router.top.config'
-import Nav from '~/components/Nav.vue'
-import Footer from '~/components/Footer.vue'
+import Nav from '~/components/Nav'
+// import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Nav,
-    Footer
+    Nav
+    // Footer
   },
   data () {
     return {
-      routeTopConfig,
-      Footer
+      routeTopConfig
     }
   },
   methods: {
@@ -52,10 +49,8 @@ export default {
 .main-content {
   // height: calc(100vh - 60px);
   // padding: 18px;
-  overflow: scroll;
 
   > div {
-    padding: 18px;
     background-color: white;
   }
 }
