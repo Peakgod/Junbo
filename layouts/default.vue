@@ -18,10 +18,12 @@
 
 import routeTopConfig from '@/assets/config/router.top.config'
 import Nav from '~/components/Nav.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Nav
+    Nav,
+    Footer
   },
   data () {
     return {
