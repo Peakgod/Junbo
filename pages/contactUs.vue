@@ -67,21 +67,28 @@
 
     </div>
 
-    <!-- <BMap /> -->
 
-    <div></div>
+    <div class="mapStyle">
+      <baidu-map class="map" :center="{lng: 101.8037500000, lat: 36.5983200000}" :zoom="15" :scroll-wheel-zoom="true">
+        <bm-marker :position="markerPoint" :dragging="true">
+          <bm-info-window>我爱北京天安门</bm-info-window>
+        </bm-marker>
+      </baidu-map>
+    </div>
   </div>
 </template>
   
 <script>
-// import BMap from 'BMap'
+import BaiduMap  from 'vue-baidu-map/components/map/Map.vue'
 
 export default {
   components: {
-    // BMap
+    BaiduMap
   },
   data () {
     return {
+      markerPoint: '',
+
       formValidate: {
         name: '',
         phone: '',
@@ -103,7 +110,6 @@ export default {
   },
   methods: {
     handleSubmit(name) {
-      console.log(' ', this.formValidate)
       this.$refs[name].validate((valid) => {
         if (valid) {
             this.$Message.success('Success!');
@@ -228,6 +234,18 @@ export default {
             font-size: 16px;
           }
         }
+    }
+    .mapStyle {
+      width: 100%;
+      background-color: rgb(224, 224, 224);
+      padding: 10px 5px 0 5px;
+      .map {
+        width: 100%;
+        height: 500px;
+      　.anchorBL {
+          display: none;
+        }
+      }
     }
   }
 </style>
