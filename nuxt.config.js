@@ -39,6 +39,12 @@ export default {
   /*
   ** Build configuration
   */
+  // entry: {
+  //   app: ['babel-polyfill', './src/main.js']
+  // },
+  // externals: {
+  //   'BMap': 'BMap'
+  // },
   build: {
     /*
     ** You can extend webpack config here
