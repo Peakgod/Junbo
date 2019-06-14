@@ -15,7 +15,7 @@
                   </span>
                 </div>
               </Col>
-              <Col span="12">
+              <Col span="13">
                 <div class="nav-container">
                   <no-ssr>
                     <div
@@ -33,9 +33,9 @@
                   </no-ssr>
                 </div>
               </Col>
-              <Col span="3">
+              <Col span="4">
                 <div class="menu-logo">
-                  <!-- <img src="" alt=""> -->
+                  <Icon type="md-call" size="30" color="white"/>
                   <span class="menu-phone">
                     0971-8202846
                     <br/>
@@ -90,7 +90,10 @@ export default {
       align-items: center;
       justify-content: center;
       img {
-        margin-right: 15px;
+        margin-right: 20px;
+      }
+      i {
+        margin-right: 5px;
       }
       span {
         color: #fff;
@@ -111,11 +114,19 @@ export default {
       align-items: center;
       justify-content: center;
       .ivu-menu-item {
-        color: #fff;
-        padding: 0 13px;
+        padding: 0 14px;
       }
     }
   }
 }
-
+.ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item {
+  color: #fff;
+} 
+.ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item-active,
+.ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu-active {
+  color: rgb(255, 255, 255);
+  border: 1px solid #fff;
+  border-radius: 15px;
+  line-height: 30px;
+}
 </style>

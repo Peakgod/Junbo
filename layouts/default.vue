@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Content>
+    <Content class="main-nav">
       <Nav/>
     </Content>
 
@@ -38,54 +38,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.error {
-  color: #ed4014;
-}
-
-.layout-default {
-  // min-height: 100vh;
-}
-
-.main-content {
-  // height: calc(100vh - 60px);
-  // padding: 18px;
-
-  > div {
-    background-color: white;
-  }
-}
-
-.menu-top {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 82px;
-  background: #00C0E4;
+.main-nav {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99999;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  color: white;
-  font-size: 18px;
-
-  img {
-    width: 24px;
-    margin-right: 6px;
-    display: inline-block;
-  }
-}
-
-.nav-container {
-  flex-grow: 1;
+  z-index: 9999;
 }
 
 </style>
