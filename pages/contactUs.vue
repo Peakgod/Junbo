@@ -69,26 +69,20 @@
 
 
     <div class="mapStyle">
-      <baidu-map class="map" :center="{lng: 101.8037500000, lat: 36.5983200000}" :zoom="15" :scroll-wheel-zoom="true">
-        <bm-marker :position="markerPoint" :dragging="true">
-          <bm-info-window>我爱北京天安门</bm-info-window>
-        </bm-marker>
-      </baidu-map>
+      <Baidumapself />
     </div>
   </div>
 </template>
   
 <script>
-import BaiduMap  from 'vue-baidu-map/components/map/Map.vue'
+import Baidumapself  from '../components/Baidumapself'
 
 export default {
   components: {
-    BaiduMap
+    Baidumapself
   },
   data () {
     return {
-      markerPoint: '',
-
       formValidate: {
         name: '',
         phone: '',
